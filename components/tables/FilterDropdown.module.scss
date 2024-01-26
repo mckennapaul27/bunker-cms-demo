@@ -1,0 +1,44 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.filter-dropdown-root {
+    position: relative;
+    display: inline-block;
+}
+.dropdown {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    z-index: 50;
+    width: 224px;
+    box-shadow: $primary-box-shadow;
+    background-color: $white;
+    border: 1px solid $primary-gray-light;
+    border-radius: 4px;
+    padding: 8px;
+    select,
+    input,
+    button {
+        margin-top: 12px;
+        display: block;
+        width: 100%;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+.icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 6px;
+}
+
+.wrapper {
+    display: inline-flex;
+}
+
+.active-filters {
+    display: flex;
+    // margin: -10px;
+    margin-left: 20px;
+}

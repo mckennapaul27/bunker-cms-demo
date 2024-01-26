@@ -1,0 +1,33 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+}
+.form-wrapper {
+    padding: 48px;
+    border-radius: 8px;
+    background-color: $white;
+    border: 1px solid $primary-gray-lightish;
+    color: $off-black;
+}
+
+.main {
+    width: 500px;
+}
+.logo-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    h2 {
+        width: 100%;
+        text-align: center;
+        margin: 40px 0 20px;
+        font-size: 28px;
+    }
+}

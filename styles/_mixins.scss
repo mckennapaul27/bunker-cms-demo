@@ -1,0 +1,21 @@
+@import './variables';
+
+@mixin flexWrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin lastChildMarginZero {
+    &:last-child {
+        margin: 0;
+    }
+}
+
+@mixin transition-ease {
+    transition: all 250ms ease-in-out;
+}

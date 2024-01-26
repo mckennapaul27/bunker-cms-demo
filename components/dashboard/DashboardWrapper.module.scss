@@ -1,0 +1,13 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.wrapper {
+    display: flex;
+    color: $primary-black;
+}
+
+.content {
+    width: 1300px;
+    border-right: 1px solid #e5e7eb;
+    position: relative;
+}

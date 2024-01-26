@@ -1,0 +1,121 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.table-overall-wrapper {
+    margin-top: 20px;
+}
+
+.table-container {
+    position: relative;
+}
+
+.table {
+    min-width: 100%;
+    // table-layout: fixed;
+    // border-collapse: separate;
+    // border-spacing: 0 16px;
+    tr {
+        // border-top: 1px solid black;
+    }
+    td,
+    th {
+        border-bottom: 1px solid $primary-gray-light;
+        text-align: left;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 12px 4px;
+    }
+    th {
+        border-bottom: 2px solid $primary-gray-light;
+    }
+}
+
+th.index-0 {
+    position: relative;
+    padding: 0 14px;
+    max-width: 48px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    input {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 14px;
+    }
+}
+th.index-1 {
+    // min-width: 300px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 12px;
+}
+th.index-other {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 12px;
+}
+
+.column-header-link {
+    display: inline-flex;
+}
+.sorting-span {
+    display: inline-flex;
+    margin-left: 8px;
+}
+.sort-icon {
+    width: 20px;
+    height: 20px;
+}
+.table-body {
+    border-collapse: separate;
+    border-spacing: 0 1px; /* Adjust the spacing as needed */
+    border-color: #e2e8f0; /* Replace with your desired gray color */
+    background-color: #fff; /* Replace with your desired background color */
+}
+.row-selected {
+    background-color: $primary-gray-lighter;
+}
+td.index-0 {
+    position: relative;
+    padding-left: 14px;
+    padding-right: 14px;
+    width: 50px;
+    .row-selection-indicator {
+        position: absolute;
+        top: -1px;
+        bottom: -1px;
+        left: 0;
+        width: 2px;
+        background-color: $primary-blue-hover;
+    }
+    input {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 14px;
+        &:focus {
+            box-shadow: $primary-box-shadow-focus;
+        }
+    }
+}
+td.index-1 {
+    font-weight: 600;
+}
+
+.row-selection-btns {
+    position: absolute;
+    left: 50px;
+    top: 0;
+    height: 48.5px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    // transform: translateY(-50%);
+    button {
+        margin-right: 8px;
+    }
+}

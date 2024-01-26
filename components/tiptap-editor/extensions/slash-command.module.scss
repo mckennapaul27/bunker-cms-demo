@@ -1,0 +1,72 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+$stone-200: #e5e7eb; // Light gray
+$stone-500: #6b7280; // Medium gray
+$stone-900: #111827; // Dark gray
+$stone-100: #f3f4f6; // Very light gray
+$white: #ffffff;
+
+.slash-command {
+    position: relative;
+    z-index: 50;
+    height: auto;
+    max-height: 330px;
+    width: 360px;
+    overflow-y: auto;
+    border-radius: 0.375rem;
+    border: 1px solid $stone-200;
+    background-color: $white;
+    padding: 0.25rem 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); // Example shadow
+    transition: all 0.2s ease-in-out;
+    padding-right: 16px;
+
+    button {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 0.375rem;
+        padding: 0.25rem 0.5rem;
+        text-align: left;
+        font-size: 0.875rem;
+        color: $stone-900;
+        background-color: transparent;
+        margin-bottom: 6px;
+        font-family: inherit;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            background-color: $stone-100;
+        }
+
+        &.selected {
+            // Assuming you add 'selected' class for selected item
+            background-color: $stone-100;
+            color: $stone-900;
+        }
+
+        > div:first-child {
+            display: flex;
+            height: 2.5rem; // 10 units
+            width: 2.5rem; // 10 units
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.375rem;
+            // border: 1px solid $stone-200;
+            background-color: $white;
+        }
+
+        p {
+            &.font-medium {
+                font-weight: 500; // Medium weight
+            }
+
+            &.text-xs {
+                font-size: 0.75rem; // Similar to Tailwind's 'text-xs'
+                color: $stone-500;
+            }
+        }
+    }
+}

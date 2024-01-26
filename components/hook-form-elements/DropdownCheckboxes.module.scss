@@ -1,0 +1,64 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.dropdown-checkboxes {
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    left: 0;
+    top: 48px;
+    z-index: 50;
+    width: 100%;
+    box-shadow: $primary-box-shadow;
+    background-color: $white;
+    border: 1px solid $primary-gray-light;
+    border-radius: 4px;
+    padding: 8px;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+
+    .checkbox {
+        margin-right: 8px;
+        &:focus {
+            box-shadow: $primary-box-shadow-focus;
+        }
+    }
+}
+
+.selected-tags {
+    padding: 12px 0;
+}
+.tag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px dashed $primary-gray;
+    color: $off-black;
+    background-color: $primary-gray-lighter;
+    padding: 8px 12px;
+    margin-top: 6px;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+.icon-wrapper {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+    &:hover {
+        svg {
+            @include transition-ease;
+            // fill: $primary-blue-hover;
+            color: $primary-blue;
+        }
+    }
+}

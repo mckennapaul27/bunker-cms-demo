@@ -1,0 +1,65 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.collection-details {
+    h1 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 2px;
+    }
+    p {
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+.wrapper {
+    padding: 32px 60px;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    &.sticky {
+        background-color: $white;
+        position: sticky;
+        left: 320px;
+        top: 0;
+        transform: translateY(-100%);
+        z-index: 1000;
+        animation-name: slideDown;
+        animation-duration: 0.6s;
+        animation-fill-mode: forwards;
+        box-shadow: $primary-box-shadow;
+        padding: 16px 20px;
+        .collection-details {
+            h1 {
+                font-size: 18px;
+                line-height: 100%;
+            }
+            p {
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+        .banner {
+            align-items: center;
+        }
+    }
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.slideDown {
+    animation-name: slideDown;
+}

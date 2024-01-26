@@ -1,0 +1,24 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.wrapper {
+    display: flex;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    color: green;
+    margin-right: 12px;
+    &.warning {
+        color: orange;
+    }
+}
+
+.title {
+    font-size: 18px;
+}
+.description {
+    margin: 12px 0 16px;
+    font-size: 15px;
+}

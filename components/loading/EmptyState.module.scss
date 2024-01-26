@@ -1,0 +1,26 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.emptyState {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
+    border: 1px dashed $primary-gray;
+    display: flex;
+    justify-content: center;
+    background-color: $white;
+}
+
+.emptyState__content {
+    text-align: center;
+}
+.emptyState__content__title {
+    font-weight: 600;
+    color: $primary-black;
+    margin: 8px;
+}
+.emptyState__content__description {
+    color: $primary-black;
+    margin: 8px;
+}
