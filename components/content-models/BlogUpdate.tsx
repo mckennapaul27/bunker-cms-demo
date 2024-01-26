@@ -106,8 +106,6 @@ export const BlogUpdate = ({
             slug: data.slug || '',
             description: data.description || '',
             tags: data.tags || [],
-            // author: data.author || '',
-            // category: data.category || '',
         },
     });
 

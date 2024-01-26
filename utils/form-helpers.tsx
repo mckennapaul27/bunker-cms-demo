@@ -170,7 +170,7 @@ export const haveFieldsChanged = (original: any, fields: any) => {
         //console.log('key:', key);
         //console.log('current:', fields[key]);
         //console.log('original:', original[key]);
-        if (selectFieldsMapping[key]) {
+        if (selectFieldsMapping[key] && original[key]) {
             return fields[key] !== original[key][selectFieldsMapping[key]];
         }
         return JSON.stringify(fields[key]) !== JSON.stringify(original[key]);
