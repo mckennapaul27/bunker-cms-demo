@@ -175,7 +175,7 @@ export const TiptapEditor = ({
                 {editor?.isActive('image') && (
                     <>
                         <ImageResizer editor={editor} />
-                        <p style={{}}>Cunt</p>
+                        {/* <p style={{}}></p> */}
                     </>
                 )}
 
